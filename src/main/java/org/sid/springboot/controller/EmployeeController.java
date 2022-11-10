@@ -59,7 +59,7 @@ public class EmployeeController {
 		
 	}
 	//Delete employee
-	@DeleteMapping("employees")
+	@DeleteMapping("employees/{id}")
 	public Map<String, Boolean> deleteEmployee(@PathVariable(value="id") Long id) throws ResourceNotFoundException {
 	
 		Employee empl = employRepo.findById(id).orElseThrow(()->new ResourceNotFoundException("Employee not found for this id"+id));
