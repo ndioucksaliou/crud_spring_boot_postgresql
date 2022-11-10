@@ -24,12 +24,11 @@ public class CrudSpringBootPostgresqlApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
-		Employee data = new Employee("Mamadou","Dia", "m.dia@gmail.com");
-////	"Zeus2000", "zal@Keurgui"
-	repository.save(data);
-	repository.findAll().forEach(p->{
-	System.out.println(p);
-	});
+		/*
+		 * Employee data = new Employee("Mamadou","Dia", "m.dia@gmail.com");
+		 * repository.save(data); repository.findAll().forEach(p->{
+		 * System.out.println(p); });
+		 */
 	}
 
 }
