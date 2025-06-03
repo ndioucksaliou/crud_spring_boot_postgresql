@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import lombok.extern.slf4j.Slf4j;
 import org.sid.springboot.exception.ResourceNotFoundException;
 import org.sid.springboot.model.Employee;
 import org.sid.springboot.repository.EmployeeRepository;
@@ -20,14 +21,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@Slf4j
 @RequestMapping(value="/api/v1/*")
 public class EmployeeController {
 	@Autowired
 	private EmployeeRepository employRepo;
+
 	//get employees
-	@GetMapping("employees")
+	@GetMapping(path = "employees")
 	public List<Employee> getEmployees(){
-		
 		return this.employRepo.findAll();
 	}
 	
@@ -42,7 +44,6 @@ public class EmployeeController {
 	//Save employee
 	@PostMapping("employees")
 	public Employee saveEmployee(@RequestBody Employee employ) {
-		
 		return this.employRepo.save(employ);
 		
 		
