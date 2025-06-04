@@ -1,3 +1,18 @@
+
+### Compiled class files ###
+*.class
+
+### Log files ###
+*.log
+logs/
+
+### Temporary files ###
+*.tmp
+*.swp
+
+### Maven target directory ###
+/target/
+
 HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
@@ -14,7 +29,7 @@ target/
 .sts4-cache
 
 ### IntelliJ IDEA ###
-.idea
+.idea/
 *.iws
 *.iml
 *.ipr
@@ -31,3 +46,14 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Application-specific files ###
+application.properties
+application.yml
+application-*.properties
+application-*.yml
+
+# Generated files
+*.war
+*.jar
+*.ear
